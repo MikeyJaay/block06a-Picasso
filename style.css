@@ -3,123 +3,127 @@ body {
 }
 
 .graphic {
-    padding: 10px;
+    padding: 1vw;
+    position: relative; /* makes w and h of container responsive to window changes */
+    width: 80vw;
+    height: 60vh;
 }
 
 /* START OF CODE FOR BOX GRAPHICS */
 .section {
     margin-bottom: 10px;
+    z-index: 1;
+    position: relative;
 }
 
 /* This is Section one (3 squares) */
 .section-one {
-    display: flex; /* Flex is for equal thirds, also for Flexbox requirment */ 
+    display: flex; /* Flex is for equal thirds, also for Flexbox requirement */ 
     justify-content: space-between;
-    gap: 10px; /* This creates the three boxes via spacing*/
+    gap: 10px; /* This creates the three boxes via spacing */
 }
 
-.section-one .third {
-    flex: 1;  /* Each Third takes equal space */
-    /* (border: 1px solid black;) commenting out as not needed*/
+
+.section-one .third, .section-two, .section-three {
+    flex: 1;
     margin: 0;
-    height: 100px;
+    height: 10vh; 
     background-color: lightseagreen;
 }
 
-/* This is Section 2 Big in the middle*/
+/* This is Section 2 Big Box in the middle */
 .section-two {
-    height: 100px;
     background-color: lightseagreen;
 }
 
 /* This is Section 3 Thin line at the bottom below big box */
 .section-three {
-    height: 10px;
     background-color: lightgreen;
+    margin-top: 10px;
+    height: 1vh;
+    margin-bottom: 0px;
 }
 /* END OF BOX CODE */
 
 /* START OF CODE FOR CIRCLES */
 .circle {
-    position: absolute;
+    position: fixed;
     border-radius: 50%;
-    aspect-ratio: 1 / 1; /* Keeps all circles porportionate so you don't have to put Height and Width for each one */
+    aspect-ratio: 1 / 1; /* Keeps all circles proportionate so you don't have to put Height and Width for each one */
+    z-index: 2;
 }
 
-/* Styling individual circles */
+
 .graphic .circle:nth-child(1) {
     background-color: yellow;
-    top: 3%;
-    left: 1%;
-    width: 40px;
+    top: 15%; /
+    left: 10%; /
+    width: 1vw; 
 }
-
 .graphic .circle:nth-child(2) {
     background-color: pink;
-    top: 15%;
-    left: 20%;
-    width: 50px;
+    top: 5%; 
+    left: 2%; 
+    width: 2vw; 
 }
 .graphic .circle:nth-child(3) {
     background-color: yellow;
-    top: 1%;
-    left: 10%;
-    width: 90px;
+    top: 15%; 
+    left: 2%; 
+    width: 2vw; 
 }
-
 .graphic .circle:nth-child(4) {
     background-color: pink;
-    top: 3%;
-    left: 20%;
-    width: 70px;
+    top: 2%; 
+    left: 15%; 
+    width: 2vw; 
 }
 .graphic .circle:nth-child(5) {
     background-color: yellow;
-    top: 10%;
-    left: 1%;
-    width: 50px;
+    top: 5%; 
+    left: 8%; 
+    width: 2vw; 
 }
-
 .graphic .circle:nth-child(6) {
     background-color: pink;
-    top: 4%;
-    left: 5%;
-    width: 50px;
+    top: 14%; 
+    left: 13%; 
+    width: 3vw; 
 }
 
-/* END OF CIRCLE CODE */
+
 
 /* START OF TRIANGLE CODE */
 .triangle {
     position: absolute;
     clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    z-index: 2;
 }
 
-/* Triagnle one and two */
 .graphic .triangle:nth-child(8) {
     background-color: lightgreen;
-    width: 200px;
-    height: 150px;
+    width: 10vw; 
+    height: 20vh; 
     right: 5%; 
-    top: 10.5%; 
+    top: 5%; 
 }
 
 .graphic .triangle:nth-child(9) {
     background-color: green;
-    width: 200px; 
-    height: 100px; 
-    right: 1%; 
-    top: 17.7%; 
+    width: 10vw; 
+    height: 8vh; 
+    right: 10%; 
+    top: 23.6%; 
 }
 /* END OF TRIANGLE CODE */
 
 /* START OF IMG CODE */
 .graphic .photo {
     position: absolute;
-    top: 9%;
-    Left: 4%;
-    width: 200px;
-    height: 200px;
-    z-index: 10;
+    top: 20%; 
+    left: 4%; 
+    width: 10vw; 
+    height: auto;
+    z-index: 2;
 }
 /* END OF IMG CODE */
