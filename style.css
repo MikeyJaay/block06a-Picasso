@@ -3,7 +3,6 @@ body {
 }
 
 .graphic {
-    border: 2px solid black;
     padding: 10px;
 }
 
@@ -110,7 +109,7 @@ body {
     width: 200px; 
     height: 100px; 
     right: 1%; 
-    top: 18%; 
+    top: 17.7%; 
 }
 /* END OF TRIANGLE CODE */
 
